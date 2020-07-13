@@ -1,0 +1,24 @@
+select "std"
+
+arr = [75,83,42,11,64]
+selectionSort(arr)
+
+func selectionSort(arr) 
+{ 
+	n = length(arr)
+        
+	for (i = 0, i < n-1, i++) 
+    {         
+		min = i
+		for (j = i+1, j < n, j++) 
+			if (arr[j] < arr[min]) 
+				min = j
+  
+		temp = arr[min]
+        arr[min] = arr[i]
+        arr[i] = temp
+	} 
+	n = length(arr)
+    for (i=0, i<n, ++i) 
+		showln arr[i] 
+}    
